@@ -24,8 +24,6 @@ $(document).ready(function main() {
   });
 
   $todolist.on("click", ".list__item", function hideTrash() {
-    console.log("completed");
-
     $(this).toggleClass("completed");
   });
 
@@ -36,5 +34,9 @@ $(document).ready(function main() {
       $todolist.append(`<li class='list__item'>${$input.val()}</li>`);
       $input.val("");
     }
+  });
+
+  $plusIcon.click(() => {
+    $newTodoInput.toggleClass("hidden");
   });
 });
