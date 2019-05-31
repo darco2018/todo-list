@@ -1,22 +1,22 @@
 {
-  "name": "dummypackagename",
+  "name": "todo-ist",
   "version": "1.0.0",
-  "description": "App for testing your knowledge of rgb",
+  "description": "To-do list",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/darco2018/dummyrepo.git"
+    "url": "git+https://github.com/darco2018/todo-list"
   },
   "author": "Dariusz Ustrzycki <ustrzycki@javacoder.cloud>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/darco2018/dummyrepo/issues"
+    "url": "https://github.com/darco2018/todo-list/issues"
   },
   "homepage": "http://www.javacoder.cloud",
   "main": "webpack.config.js",
   "keywords": [
-    "rgb",
-    "color",
-    "game"
+    "to-do",
+    "list",
+    "jQuery"
   ],
   "scripts": {
     "stylelint": "stylelint src/**/*.css --fix",
@@ -29,16 +29,13 @@
     "kill": "netstat -nlp | grep 8080",
     "stats": "webpack --profile --json > stats.json",
     "lint": "eslint --fix src/",
-    "preious-build": "webpack --mode=production --display-error-details",
     "watch": "webpack -d --watch  --display-error-details",
     "fixCss": "node scripts/fixPathInCssBackground.js",
     "dev": "webpack-dashboard -- node index.js",
     "start": "webpack-dev-server --env development",
     "build": "webpack --env production"
   },
-  "dependencies": {
-    "lodash": "^4.17.11"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
