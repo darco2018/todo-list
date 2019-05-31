@@ -22,4 +22,17 @@ $(document).ready(function main() {
       .find(`.${trashIconClass}`)
       .remove();
   });
+
+  $todolist.on("click", ".list__item", function hideTrash() {
+    $(this).toggle("completed");
+  });
+
+  $newTodoInput.keypress(function fn(e) {
+    const key = e.which || e.keyCode;
+    if (key === 13) {
+      const $input = $(this);
+      $todolist.append(`<li class='list__item'>${$input.val()}</li>`);
+      $input.val("");
+    }
+  });
 });
