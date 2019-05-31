@@ -24,7 +24,9 @@ $(document).ready(function main() {
   });
 
   $todolist.on("click", ".list__item", function hideTrash() {
-    $(this).toggle("completed");
+    console.log("completed");
+
+    $(this).toggleClass("completed");
   });
 
   $newTodoInput.keypress(function fn(e) {
