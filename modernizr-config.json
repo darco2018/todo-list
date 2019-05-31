@@ -1,0 +1,5 @@
+{
+  "minify": true,
+  "options": ["setClasses"],
+  "feature-detects": ["test/css/mask", "test/svg/clippaths"]
+}
