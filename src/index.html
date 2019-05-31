@@ -1,5 +1,3 @@
-<!-- @format -->
-
 <!DOCTYPE html>
 <html class="no-js" lang="en">
   <head>
@@ -7,6 +5,14 @@
     <title>To-do list</title>
     <meta name="description" content="A to-do list" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <meta name="theme-color" content="#fafafa" />
   </head>
 
@@ -26,16 +32,43 @@
       >.
     </noscript>
     <!-- // [START main]  -->
-    <main></main>
-    <!-- // [END main]  -->
-    <!-- // [START Footer]  -->
-    <footer class="bottom-wrapper">
-      <p>
-        Copyright 2019<br />
-        Code & design by Dariusz Ustrzycki
-      </p>
-    </footer>
-    <!-- // [END Footer]  -->
+    <div class="page-container">
+      <main class="content-wrapper">
+        <div class="list-header">
+          <span class="list-header__title">to-do list</span>
+          <i class="fa fa-plus-circle fa-lg"></i>
+        </div>
+
+        <input
+          type="text"
+          class="new-todo"
+          name="new-todo"
+          placeholder="      Add a new to-do"
+        />
+
+        <ul class="list">
+          <li class="list__item">
+            <i class="fa fa-trash"></i>Revise HTML5 tags
+          </li>
+          <li class="list__item">Update Github</li>
+          <li class="list__item">Read about BEM</li>
+          <li class="list__item">Remove console.logs</li>
+          <li class="list__item">Eslint JS files</li>
+          <li class="list__item">Add font awesome</li>
+          <li class="list__item">Find the polyfills</li>
+          <li class="list__item">Remove comments</li>
+        </ul>
+      </main>
+      <!-- // [END main]  -->
+      <!-- // [START Footer]  -->
+      <footer class="footer">
+        <p>
+          Copyright 2019<br />
+          Code & design by Dariusz Ustrzycki
+        </p>
+      </footer>
+      <!-- // [END Footer]  -->
+    </div>
     <script src="js/vendor/modernizr.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.0.js"
