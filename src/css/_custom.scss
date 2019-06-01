@@ -2,6 +2,7 @@ $font-stack: "Roboto", sans-serif;
 
 $colors: (
   "bgr-grey": rgba(255, 255, 255, 1),
+  "lightest-grey": rgb(225, 237, 237),
   "light-grey": lightgrey,
   "completed": grey,
   "dark-blue": navy,
@@ -89,7 +90,7 @@ body {
     text-align: center;
     font-weight: normal;
     font-size: 0.8rem;
-    background-color: aqua;
+    background-color: color(lightest-grey);
   }
 }
 
@@ -98,9 +99,9 @@ body {
   min-height: 100vh;
 
   .content-wrapper {
-    background-color: color(light-grey);
+    background-color: color(lightest-grey);
     width: 100%;
-    padding-bottom: $footer-height;
+    padding-bottom: $footer-height * 0.75;
     margin: 0 auto;
     @include listBoxShadow;
     @include respond-to(size(extrasmall)) {
@@ -117,25 +118,30 @@ body {
       &__title {
         color: color(custom-white);
         text-transform: uppercase;
+        font-size: 1.5rem;
         font-weight: 700;
       }
       .fa-plus-circle {
         float: right;
         color: color(custom-white);
         padding-right: pad(side);
-        padding-top: pad(top-btm)-0.1;
+        padding-top: pad(top-btm) + 0.3rem;
       }
     }
 
     .new-todo {
+      font-size: 1.5rem;
+      color: color(dark-blue);
       box-sizing: border-box;
       border: none;
       padding: pad(top-btm) pad(side);
+      height: 3rem;
       width: 100%;
       outline: 0;
     }
 
     .new-todo:focus {
+      color: color(dark-blue);
       border: 3px solid color(dark-blue);
     }
 
@@ -143,26 +149,21 @@ body {
       list-style: none;
       padding-left: pad(side);
       padding-top: pad(top-btm);
+      background-color: color(lightest-grey);
 
       .fa-trash {
         color: color(custom-white);
         background: color(custom-red);
         width: 20px;
-        height: 20px;
         text-align: center;
         padding: 6px;
         margin-right: pad(side) / 2;
-        // opacity: 1;
       }
 
-      /* .fa-trash:hover {
-        transition: 2s;
-        opacity: 0;
-      } */
-
       &__item {
+        height: 40px;
+        line-height: 40px;
         padding-top: pad(top-btm);
-        padding-bottom: pad(top-btm);
       }
 
       &__item:hover {

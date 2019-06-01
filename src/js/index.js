@@ -9,7 +9,6 @@ $(document).ready(function main() {
   const trashIconClass = "fa-trash";
   const trashIcon = `<i class='fa ${trashIconClass} fa-1g'></i>`;
 
-  // we define in 2nd arg:'this' (note: we skip $())
   $todoList.on("mouseenter", ".list__item", function showTrashIcon() {
     $(this).prepend(trashIcon);
   });
@@ -24,9 +23,11 @@ $(document).ready(function main() {
     if (e.target.nodeName.toLowerCase() === "li") {
       $(this).toggleClass("completed");
     } else if (e.target.nodeName.toLowerCase() === "i") {
-      $(this)
-        .closest("li")
-        .remove();
+      $(this).fadeOut("400", function fn() {
+        $(this)
+          .closest("li")
+          .remove();
+      });
     }
   });
 
