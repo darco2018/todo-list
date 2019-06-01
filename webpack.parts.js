@@ -142,7 +142,7 @@ exports.extractCSS = ({ include, exclude, use = [] }) => {
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: "css/[name].css", // styles/[name].css
+        filename: "assets/css/[name].css", // styles/[name].css
         chunkFilename: "[id].css",
       }),
       // after adding OptimizeCssAssetsPlugin, source maps stopped appearing
