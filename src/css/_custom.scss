@@ -39,9 +39,41 @@ $paddings: (
 
 $footer-height: 4rem;
 
+@mixin bgrGradient() {
+  background: -moz-linear-gradient(
+    left,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(246, 246, 246, 1) 47%,
+    rgba(237, 237, 237, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba(255, 255, 255, 1)),
+    color-stop(47%, rgba(246, 246, 246, 1)),
+    color-stop(100%, rgba(237, 237, 237, 1))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(246, 246, 246, 1) 47%,
+    rgba(237, 237, 237, 1) 100%
+  );
+
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(246, 246, 246, 1) 47%,
+    rgba(237, 237, 237, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1 );
+}
+
 body {
-  background-color: color(bluish);
+  // background-color: color(bluish);
   font-family: $font-stack;
+  background: rgba(255, 255, 255, 1);
+  @include bgrGradient;
 
   .footer {
     position: absolute;
@@ -69,7 +101,6 @@ body {
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
 
     @include respond-to(size(extrasmall)) {
-      color: red;
       width: 360px;
       margin: 100px auto 0 auto;
     }
