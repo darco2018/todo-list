@@ -117,7 +117,7 @@ body {
       &__title {
         color: color(custom-white);
         text-transform: uppercase;
-        font-weight: bold;
+        font-weight: 700;
       }
       .fa-plus-circle {
         float: right;
@@ -166,7 +166,7 @@ body {
       }
 
       &__item:hover {
-        transition: 0.2s;
+        // transition: 0.3s;
         font-weight: 800;
       }
     }
