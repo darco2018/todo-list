@@ -6,7 +6,8 @@ $colors: (
   "completed": grey,
   "dark-blue": navy,
   "dark": #15151b,
-  "white": rgb(236, 232, 232)
+  "custom-white": rgb(236, 232, 232),
+  "custom-red": rgb(179, 7, 7)
 );
 
 @function color($color-name) {
@@ -114,13 +115,13 @@ body {
       padding-bottom: pad(top-btm);
 
       &__title {
-        color: color(light-grey);
+        color: color(custom-white);
         text-transform: uppercase;
         font-weight: bold;
       }
       .fa-plus-circle {
         float: right;
-        color: color(light-grey);
+        color: color(custom-white);
         padding-right: pad(side);
         padding-top: pad(top-btm)-0.1;
       }
@@ -144,12 +145,29 @@ body {
       padding-top: pad(top-btm);
 
       .fa-trash {
-        color: color(icon-clr);
+        color: color(custom-white);
+        background: color(custom-red);
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        padding: 6px;
+        margin-right: pad(side) / 2;
+        // opacity: 1;
       }
+
+      /* .fa-trash:hover {
+        transition: 2s;
+        opacity: 0;
+      } */
 
       &__item {
         padding-top: pad(top-btm);
         padding-bottom: pad(top-btm);
+      }
+
+      &__item:hover {
+        transition: 0.2s;
+        font-weight: 800;
       }
     }
   }

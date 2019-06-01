@@ -7,7 +7,7 @@ $(document).ready(function main() {
   const $newTodoInput = $(".new-todo");
   const $todoList = $(".list");
   const trashIconClass = "fa-trash";
-  const trashIcon = `<i class='fa ${trashIconClass}'></i>`;
+  const trashIcon = `<i class='fa ${trashIconClass} fa-1g'></i>`;
 
   // we define in 2nd arg:'this' (note: we skip $())
   $todoList.on("mouseenter", ".list__item", function showTrashIcon() {
