@@ -82,7 +82,7 @@
     "purify-css": "^1.2.5",
     "purifycss-webpack": "^0.7.0",
     "sass-loader": "^7.1.0",
-    "ssri": "^6.0.1",
+    "ssri": "^8.0.1",
     "strip-json-comments": "^2.0.1",
     "style-loader": "^0.20.2",
     "stylelint": "^10.0.1",
